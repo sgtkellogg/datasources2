@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>{{ site.data.trans.[page.lang].title }}</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/icons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/icons/apple-touch-icon-144x144-precomposed.png">
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/libs/jquery.dropdown.css" />
+
+    <script src="{{ site.baseurl }}/assets/js/libs/jquery.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/libs/jquery.dropdown.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+</head>
+{% if page.lang == 'ar' or page.lang == 'fa' %}
+    {% assign rtl = true %}
+{% else %}
+    {% assign rtl = false %}
+{% endif %}
+<body lang="{{ page.lang }}"{% if rtl %} dir="rtl"{% endif %}>
+
+<header>
+    <h1><img style="width:225px" src="{{ site.baseurl }}/assets/img/DataLucent-Logo-text-translucent-tight.png" /></h1>
+    <p class="tagline">{{ site.data.trans.[page.lang].tagline }}</p>
+</header>
